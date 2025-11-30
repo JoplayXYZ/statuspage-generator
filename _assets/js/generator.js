@@ -13,17 +13,25 @@ function generatePageLink() {
 
     const resultEmbed = `https://statusgen.joplay.xyz/embed.html?servers=${serverIps}`;
     const resultSimple = `https://statusgen.joplay.xyz/simple.html?servers=${serverIps}`;
+    const resultIframe = `<iframe style="width:433px;display:block;margin:auto;border:none;max-width:432px;" src="${resultEmbed}"></iframe>`
 
     const resultHtml = `
     <div class="popup-box">
+        <h3>Generated Pages / Code</h3>
         <p>Simple:</p>
         <a href="${resultSimple}">${resultSimple}</a>
+        
         <p>Embed (iframe):</p>
-        <a href="${resultEmbed}">${resultEmbed}</a><br>
+        <a href="${resultEmbed}">${resultEmbed}</a>
+        <br>
+        <p>Html Code
+        <p id="iframe-code"></p>
+        <br>
         <button id="popupCloseBtn">Close</button>
     </div>`;
 
     showPopup(resultHtml);
+    document.getElementById("iframe-code").textContent = resultIframe;
 }
 
 function showPopup(content) { // content should be html

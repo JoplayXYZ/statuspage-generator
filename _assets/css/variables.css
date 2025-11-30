@@ -1,0 +1,20 @@
+:root {
+    --bg: #040505;
+    --card: #171a1c;    
+    --line: #676c70;
+
+    --white: #cfcfcf;
+    --red: #f04949;
+    --orange: #ee9734;
+    --green: #00ff9d;
+
+    --txt1: #ebf7f2;
+    --txt2: #78db9e;
+    --txt3: #b9b9b9;
+    --txt4: #bbe0cb;
+    --link: #41d880;
+}
+
+* {
+    scrollbar-color: #00ff9d #171a1c;
+}

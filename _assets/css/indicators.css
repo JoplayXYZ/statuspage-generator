@@ -1,0 +1,24 @@
+.status-indicator {
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-indicator.online {
+    background-color: var(--green);
+}
+
+.status-indicator.offline {
+    background-color: var(--red);
+}
+
+.status-indicator.loading {
+    background-color: var(--orange);
+    animation: loading 1s ease-in-out infinite;
+}
+
+.status-indicator.error {
+    background-color: transparent;
+    border: 2px solid var(--white);
+}

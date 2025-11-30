@@ -1,0 +1,33 @@
+body {
+    background-color: var(--bg);
+    font-family: monospace;
+    color: var(--txt1);
+}
+
+h1, h2, h3 {
+    margin: 0.5rem;
+}
+
+h2 {
+    color: var(--txt2);
+}
+
+h3 {
+    color: var(--txt3);
+}
+
+p {
+    color: var(--txt4);
+}
+
+a {
+    color: var(--link);
+}
+
+.font-thick {
+    font-weight: 800;
+}
+
+span.servername {
+    font-weight: 600;
+}
