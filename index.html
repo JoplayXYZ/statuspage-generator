@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/_assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Server Statuspage generator</h1>
+        <p>JoplayXYZdev's Server statuspage generator</p>
+    </header>
+    <main id="main">
+        <h2>Generator:</h2>
+        <div id="serverIpList" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <input type="text" id="serverip" placeholder="Server IP or Name (minekeep only)">
+        </div>
+        <div style="display: flex; flex-direction: row; gap: 0.5rem;">
+            <button onclick="addListInput()" style="min-width: 2rem;">+</button>
+            <button onclick="removeListInput()" style="min-width: 2rem;">-</button>
+        </div>
+        
+        <button onclick="generatePageLink()">Generate</button>
+
+        <h2>Example:</h2>
+        <h3>online:</h3>
+        <section>
+            <div class="segment">
+                <span id="servername" class="servername">mc.onlinemcserver.com</span>
+                <div class="status-indicator online"></div>
+            </div>
+            <div class="line"></div>
+            <div class="segment-end">
+                <span id="playercount">4 / 10</span>
+            </div>
+        </section>
+        <h3>offline:</h3>
+        <section>
+            <div class="segment">
+                <span id="servername" class="servername">play.offlinemc.net</span>
+                <div class="status-indicator offline"></div>
+            </div>
+            <div class="line"></div>
+            <div class="segment-end">
+                <span id="playercount">offline</span>
+            </div>
+        </section>
+        <h3>loading:</h3>
+        <section>
+            <div class="segment">
+                <span id="servername" class="servername">play.loadingmc.xyz</span>
+                <div class="status-indicator loading"></div>
+            </div>
+            <div class="line"></div>
+            <div class="segment-end">
+                <span id="playercount">loading...</span>
+            </div>
+        </section>
+        <h3>loading:</h3>
+        <section>
+            <div class="segment">
+                <span id="servername" class="servername">mc.errorsmp.fun</span>
+                <div class="status-indicator error"></div>
+            </div>
+            <div class="line"></div>
+            <div class="segment-end">
+                <span>Network Error</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Made by <a href="https://joplay.xyz">Joplay.xyz</a></p>
+    </footer>
+    
+    <script src="/_assets/js/main.js"></script>
+    <script src="/_assets/js/generator.js"></script>
+</body>
+</html>
